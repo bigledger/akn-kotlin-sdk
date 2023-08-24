@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "akn-kotlin-sdk"
 include(":app")
- 
+include(":akn-kotlin-sdk")

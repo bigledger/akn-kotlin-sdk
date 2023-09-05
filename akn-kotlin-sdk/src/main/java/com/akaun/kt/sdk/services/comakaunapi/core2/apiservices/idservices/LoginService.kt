@@ -11,6 +11,10 @@ import retrofit2.http.Query
 
 interface LoginService {
     @POST(Core2Config.PLATFORM_DOMAIN_URL_PREFIX + "identity/login")
-    fun login(@Body loginRequest: LoginRequest
+    fun loginWithCall(@Body loginRequest: LoginRequest
               , @Query("tenantCode") tenantCode :String? = null) : Call<LoginResponse>
+
+    @POST(Core2Config.PLATFORM_DOMAIN_URL_PREFIX + "identity/login")
+    fun login(@Body loginRequest: LoginRequest
+              , @Query("tenantCode") tenantCode :String? = null) : LoginResponse
 }

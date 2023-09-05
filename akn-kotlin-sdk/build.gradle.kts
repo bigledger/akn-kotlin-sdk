@@ -10,22 +10,22 @@ java {
 }
 
 dependencies {
-    //Retrofit
-    api ("com.squareup.retrofit2:retrofit:2.9.0")
+    //Retrofit Core
+    api (libs.retrofit.core)
     //GSON converter
-    api ("com.squareup.retrofit2:converter-gson:2.9.0")
+    api (libs.retrofit.converter.gson)
     //moshi converter
-    api ("com.squareup.retrofit2:converter-moshi:2.9.0")
+    api (libs.retrofit.converter.moshi)
     // Logging response
-    api ("com.squareup.okhttp3:logging-interceptor:4.11.0")
-    // okhttp
-    api ("com.squareup.okhttp3:okhttp:4.11.0")
+    api (libs.okhttp.logging)
+    // okhttp core
+    api (libs.okhttp.core)
 }
 
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "com.github.ShyamBorkar"
+            groupId = "com.github.bigledger"
             artifactId = "akn-kotlin-sdk"
             version = "0.0.1"
             from(components["java"])

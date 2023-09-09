@@ -6,6 +6,10 @@ import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.ApiRespons
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.stockservices.StockTakeSessionService
 import com.akaun.kt.sdk.utils.client.RetrofitClient
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -13,6 +17,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 class ApiTestCall {
+    @OptIn(DelicateCoroutinesApi::class)
     fun trialApiCall() {
 //        val identityApi = ApiTest.identityService
 //        val loginRequest = LoginRequest("krishnaInTheOffice108!", "shyamborkar@wavelet.net")
@@ -31,34 +36,16 @@ class ApiTestCall {
 
         val stockTakeSessionHdrService =
             stockTakeSessionHdrRetrofit.create(StockTakeSessionService::class.java)
-        val call = stockTakeSessionHdrService.getAllStockTakeSessionHdr()
 
-        call.enqueue(object : Callback<ApiResponseModel<StockTakeSessionHeaderModel>> {
-            override fun onResponse(
-                call: Call<ApiResponseModel<StockTakeSessionHeaderModel>>,
-                response: Response<ApiResponseModel<StockTakeSessionHeaderModel>>
-            ) {
-                if (response.isSuccessful) {
-                    val responseBody: List<StockTakeSessionHeaderModel>? = response.body()?.data
-                    if (responseBody != null) {
-                        Log.d("responseBody", "code: $responseBody")
+        // Create a coroutine on the GlobalScope
+        GlobalScope.launch(Dispatchers.IO) {
+            try {
+                val response = stockTakeSessionHdrService.getAllStockTakeSessionHdr()
+                Log.d("responseBody", "code: ${response.data}")
 
-                        Log.d("responseBody", "code: $responseBody")
-                    }
-                } else {
-
-                    val errorBody: String? = response.errorBody()?.string()
-                    // Handle error response
-                    Log.d("Error response", "error reason: $errorBody")
-                }
+            } catch (e: Exception) {
+                Log.e("API Call", "Failed Reason: ${e.message}")
             }
-
-            override fun onFailure(
-                call: Call<ApiResponseModel<StockTakeSessionHeaderModel>>,
-                t: Throwable
-            ) {
-                Log.e("API Call", "Failed Reason: ${t.message}")
-            }
-        })
+        }
     }
 }

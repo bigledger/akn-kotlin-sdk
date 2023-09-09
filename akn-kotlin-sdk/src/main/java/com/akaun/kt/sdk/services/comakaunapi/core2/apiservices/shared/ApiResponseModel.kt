@@ -1,5 +1,7 @@
 package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared
 
+import com.akaun.kt.sdk.models.dbschema.bl_fi_mst_entity_login_subject_link
+
 data class BasicApiResponseModel<T>(
     val code: String,
     val message: String?,
@@ -29,10 +31,10 @@ data class AppletTenantToken(
 )
 
 data class LoginResponse(
-    val authToken: String,
-    val tenantCodes: List<String>,
     val appletTenantTokenList: List<AppletTenantToken>,
-    val subjectGuid: String,
+    val authToken: String,
+    val bl_fi_mst_entity_login_subject_link: List<bl_fi_mst_entity_login_subject_link>,
     val email: String,
-    val mobileNumber: String
+    val mobileNumber: String,
+    val subjectGuid: String?
 )

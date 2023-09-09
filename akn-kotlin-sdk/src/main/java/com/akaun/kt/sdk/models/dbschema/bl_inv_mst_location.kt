@@ -1,0 +1,32 @@
+package com.akaun.kt.sdk.models.dbschema
+
+data class bl_inv_mst_location(
+    var addressLine1: String? = null,
+    var addressLine2: Any? = null,
+    var addressLine3: Any? = null,
+    var addressLine4: Any? = null,
+    var addressLine5: Any? = null,
+    var city: Any? = null,
+    var clientKey: Any? = null,
+    var clientSource: Any? = null,
+    var clientValue: Any? = null,
+    var code: String? = null,
+    var country: Any? = null,
+    var createdBySubjectGuid: String? = null,
+    var createdDate: String? = null,
+    var descr: String? = null,
+    var geolocLatitude: Any? = null,
+    var geolocLongitude: Any? = null,
+    var guid: String? = null,
+    var guidBlFiMstBranch: String? = null,
+    var guidBlFiMstComp: String? = null,
+    var locationType: Any? = null,
+    var modifiedBySubjectGuid: String? = null,
+    var modifiedDate: String? = null,
+    var name: String? = null,
+    var postalCode: Any? = null,
+    var revision: String? = null,
+    var state: String? = null,
+    var status: String? = null,
+    var vrsn: String? = null
+)

@@ -24,6 +24,7 @@ class Core2Config {
 
         const val TENANT_ECOM_URL_PREFIX = "core2/tnt/dm/ecom/"
         const val TENANT_DOMAIN_URL_PREFIX = "core2/tnt/dm/"
+        const val ERP_MODULE_PREFIX = "erp/"
         const val TENANT_CUSTOM_URL_PREFIX = "core2/tnt/cm/"
         const val TENANT_DOMAIN_CRM_MODULE_URL_PREFIX = "core2/tnt/dm/crm/"
         const val TENANT_MICRO_SERVICES_CRM_URL_PREFIX = "core2/tnt/ms/crm/"
@@ -65,6 +66,8 @@ class Core2Config {
         const val COMMISSION_PREFIX = "commission/"
         const val CPCOMMERCE_PREFIX = "cp-commerce/"
         const val MADE_TO_ORDER_PREFIX = "mto/"
+
+        const val STOCKTAKE_PREFIX = "stocktake/"
 
         const val SFA_MODULE_PREFIX = "sfa/"
         const val SALES_COMMISSION_PREFIX = "sales-commission-report/"

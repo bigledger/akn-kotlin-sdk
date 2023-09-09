@@ -2,16 +2,14 @@ package com.akaun.kt.sdk
 
 import android.util.Log
 import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionHeaderModel
-import com.akaun.kt.sdk.models.dbschema.LoginRequest
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.ApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
-import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.stockservices.StockTakeHdrService
-import com.akaun.kt.sdk.utils.RetrofitClient
+import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.stockservices.StockTakeSessionService
+import com.akaun.kt.sdk.utils.client.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 class ApiTestCall {
@@ -32,7 +30,7 @@ class ApiTestCall {
             .build()
 
         val stockTakeSessionHdrService =
-            stockTakeSessionHdrRetrofit.create(StockTakeHdrService::class.java)
+            stockTakeSessionHdrRetrofit.create(StockTakeSessionService::class.java)
         val call = stockTakeSessionHdrService.getAllStockTakeSessionHdr()
 
         call.enqueue(object : Callback<ApiResponseModel<StockTakeSessionHeaderModel>> {

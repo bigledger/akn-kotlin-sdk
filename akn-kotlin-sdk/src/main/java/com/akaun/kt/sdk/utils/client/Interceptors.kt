@@ -1,4 +1,4 @@
-package com.akaun.kt.sdk.utils
+package com.akaun.kt.sdk.utils.client
 
 import okhttp3.Interceptor
 import okhttp3.Response

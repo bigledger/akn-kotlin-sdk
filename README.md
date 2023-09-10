@@ -1,29 +1,51 @@
-# README #
+# AKAUN Kotlin SDK #
+[![](https://jitpack.io/v/bigledger/akn-kotlin-sdk.svg)](https://jitpack.io/#bigledger/akn-kotlin-sdk)
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This reusable library is similar to the ts-lib (for Angular Typescript reusable library for the applets in the bigledger platform). Essentially, we are using this library to write the wrappers of various API calls. 
+Examples would be for the login (authentication / authorization), retrieval of a list of applets , a list of tenants. This module will contain all the network related code using  the popular retrofit library.
 
-### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+## Gradle
+To get a Git project into your build:
 
-### How do I get set up? ###
+Add the dependency below into your **module**'s `build.gradle` file:
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+### Kotlin
 
-### Contribution guidelines ###
+```gradle
+dependencies {
+    implementation("com.github.bigledger:akn-kotlin-sdk:Tag")
+}
+```
 
-* Writing tests
-* Code review
-* Other guidelines
+### Groovy
 
-### Who do I talk to? ###
+```gradle
+dependencies {
+    implementation 'com.github.bigledger:akn-kotlin-sdk:Tag'
+}
+```
 
-* Repo owner or admin
-* Other community or team contact
+Make sure to add this into the settings.gradle file of your project:
+
+### Kotlin
+
+```gradle
+allprojects {
+  repositories {
+    ...
+    maven("https://www.jitpack.io")
+  }
+}
+```
+
+### Groovy
+
+```gradle
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+```

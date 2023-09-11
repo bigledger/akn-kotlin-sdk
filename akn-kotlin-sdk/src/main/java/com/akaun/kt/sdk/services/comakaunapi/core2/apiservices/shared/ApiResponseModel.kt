@@ -24,10 +24,18 @@ data class PagingResponseModel<T>(
 )
 
 // Additional attributes excluded
+//data class AppletTenantToken(
+//    val tenantCode: String,
+//    val appletCode: String,
+//    val token: String
+//)
+
 data class AppletTenantToken(
     val tenantCode: String,
     val appletCode: String,
-    val token: String
+    val token: String,
+    val appletGuid : String,
+    val tenantGuid : String
 )
 
 data class LoginResponse(

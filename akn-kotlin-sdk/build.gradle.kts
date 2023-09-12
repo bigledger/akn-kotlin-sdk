@@ -27,7 +27,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.github.bigledger"
             artifactId = "akn-kotlin-sdk"
-            version = "0.0.1"
+            version = "0.0.5"
             from(components["java"])
         }
     }

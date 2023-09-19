@@ -22,6 +22,7 @@ object RetrofitClient {
             .connectTimeout(requestTimeout, TimeUnit.SECONDS) // Set the connection timeout
             .readTimeout(requestTimeout, TimeUnit.SECONDS)    // Set the read timeout
             .writeTimeout(requestTimeout, TimeUnit.SECONDS)   // Set the write timeout
+            .addInterceptor(LoggingInterceptor.bodyLoggingInterceptor)
             .build()
         return basicClient
     }

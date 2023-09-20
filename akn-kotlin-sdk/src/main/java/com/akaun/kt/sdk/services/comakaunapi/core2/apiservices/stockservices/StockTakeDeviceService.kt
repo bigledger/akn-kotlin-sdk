@@ -60,7 +60,7 @@ interface StockTakeDeviceService {
 
     @POST(Core2Config.DOMAIN_URL_PREFIX + "stocktake-device")
     suspend fun createStockTakeSessionDevice(
-        stockTakeSessionDeviceModel: StockTakeSessionDeviceModel
+        @Body stockTakeSessionDeviceModel: StockTakeSessionDeviceModel
     ) : BasicApiResponseModel<StockTakeSessionDeviceModel>
 
     @PUT(Core2Config.DOMAIN_URL_PREFIX + "stocktake-device")

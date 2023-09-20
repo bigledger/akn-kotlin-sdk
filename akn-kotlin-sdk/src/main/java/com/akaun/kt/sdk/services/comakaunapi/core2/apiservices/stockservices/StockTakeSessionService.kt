@@ -5,6 +5,7 @@ import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionHeaderModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.ApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.BasicApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
+import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.PagingResponseModel
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -34,5 +35,5 @@ interface StockTakeSessionService {
         @Query("order") order: String = "ASC",
         @Query("limit") limit: Int = 100,
         @Query("offset") offset: Int = 0
-    ) : ApiResponseModel<StockTakeSessionDeviceModel>
+    ) : PagingResponseModel<StockTakeSessionDeviceModel>
 }

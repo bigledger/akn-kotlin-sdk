@@ -5,6 +5,7 @@ import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionRecordModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.ApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.BasicApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
+import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.PagingResponseModel
 import retrofit2.http.Body
 import retrofit2.http.DELETE
 import retrofit2.http.GET
@@ -53,7 +54,7 @@ interface StockTakeRecordService {
         @Query("guid_session_device") guid_session_device: String,
         @Query("calcTotalRecords") calcTotalRecords: Boolean = true,
         @Query("offset") offset: Int = 0
-    ): ApiResponseModel<StockTakeSessionRecordModel>
+    ): PagingResponseModel<StockTakeSessionRecordModel>
 
     //TODO: Create Model and Fill up Criteria
 //    @GET(Core2Config.DOMAIN_URL_PREFIX + "stocktake-record" + "inv-item-devices/query")

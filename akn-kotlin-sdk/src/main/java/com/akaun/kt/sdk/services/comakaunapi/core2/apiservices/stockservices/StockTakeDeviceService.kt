@@ -38,7 +38,7 @@ interface StockTakeDeviceService {
     @GET(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.STOCKTAKE_PREFIX + "devices/" + "backoffice-ep/query")
     suspend fun getStockTakeDeviceByCriteria(
         @Query("calcTotalRecords") calcTotalRecords: Boolean = true,
-        @Query("code") sessionGuid: String,
+        @Query("code") code: String,
         @Query("limit") limit: Int = 100,
         @Query("offset") offset: Int = 0
     ) : PagingResponseModel<StockTakeDeviceModel>

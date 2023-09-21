@@ -30,7 +30,7 @@ interface StockTakeDeviceService {
     suspend fun getAllStockTakeDevice(
     ) : ApiResponseModel<StockTakeDeviceModel>
 
-    @GET(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.STOCKTAKE_PREFIX + "devices/" + "backoffice-ep")
+    @GET(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.STOCKTAKE_PREFIX + "devices/" + "backoffice-ep/{guid}")
     suspend fun getStockTakeDeviceByGuid(
         @Path("guid") guid: String
     ) : BasicApiResponseModel<StockTakeDeviceModel>

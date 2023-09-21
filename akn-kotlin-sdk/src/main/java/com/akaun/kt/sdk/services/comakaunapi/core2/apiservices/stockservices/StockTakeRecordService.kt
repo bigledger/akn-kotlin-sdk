@@ -11,6 +11,7 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.PUT
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface StockTakeRecordService {
     @POST(Core2Config.DOMAIN_URL_PREFIX + "stocktake-record")
@@ -48,8 +49,11 @@ interface StockTakeRecordService {
 
     @GET(Core2Config.DOMAIN_URL_PREFIX + "stocktake-record" + "/query")
     suspend fun getStokeTakeSessionRecordByCriteria(
-        //TODO: Fill up criteria
-    ): BasicApiResponseModel<StockTakeSessionRecordModel>
+        @Query("guid_session_hdr") guid_session_hdr: String,
+        @Query("guid_session_device") guid_session_device: String,
+        @Query("calcTotalRecords") calcTotalRecords: Boolean = true,
+        @Query("offset") offset: Int = 0
+    ): ApiResponseModel<StockTakeSessionRecordModel>
 
     //TODO: Create Model and Fill up Criteria
 //    @GET(Core2Config.DOMAIN_URL_PREFIX + "stocktake-record" + "inv-item-devices/query")

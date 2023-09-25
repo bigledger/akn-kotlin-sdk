@@ -49,6 +49,7 @@ interface StockTakeDeviceService {
     suspend fun getStockTakeSessionDeviceByCriteria(
         @Query("calcTotalRecords") calcTotalRecords: Boolean = true,
         @Query("session_guid") sessionGuid: String,
+        @Query("device_guid") deviceGuid: String = "",
         @Query("limit") limit: Int = 100,
         @Query("offset") offset: Int = 0
     ) : PagingResponseModel<StockTakeSessionDeviceModel>

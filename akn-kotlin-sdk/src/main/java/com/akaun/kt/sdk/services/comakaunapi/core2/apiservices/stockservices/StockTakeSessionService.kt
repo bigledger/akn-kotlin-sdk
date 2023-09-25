@@ -25,8 +25,8 @@ interface StockTakeSessionService {
 
     @GET(Core2Config.DOMAIN_URL_PREFIX + "stocktake-hdr/" + "device-session/backoffice-ep/{device_guid}/{is_session_open}")
     suspend fun getStockTakeSessionByDeviceGuid(
-        @Path("device_guid") device_guid: String,
-        @Path("is_session_open") is_session_open: Boolean
+        @Path("device_guid") device_guid: String = "",
+        @Path("is_session_open") is_session_open: Boolean = true
     ): ApiResponseModel<StockTakeSessionHeaderModel>
 
     @POST(Core2Config.DOMAIN_URL_PREFIX + "stocktake-hdr/backoffice-ep")

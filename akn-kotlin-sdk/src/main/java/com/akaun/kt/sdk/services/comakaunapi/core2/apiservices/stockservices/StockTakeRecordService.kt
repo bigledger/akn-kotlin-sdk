@@ -1,6 +1,7 @@
 package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.stockservices
 
 import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionHeaderModel
+import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionRecordInvItemDeviceModel
 import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionRecordModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.ApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.BasicApiResponseModel
@@ -15,6 +16,10 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface StockTakeRecordService {
+
+    /*
+    * StockTakeSessionRecordController
+    * */
     @POST(Core2Config.DOMAIN_URL_PREFIX + "stocktake-record")
     suspend fun createStokeTakeSessionRecord(
         @Body stockTakeSessionRecordModel: StockTakeSessionRecordModel
@@ -46,19 +51,40 @@ interface StockTakeRecordService {
 
     @GET(Core2Config.DOMAIN_URL_PREFIX + "stocktake-record" + "/{guid}")
     suspend fun getStokeTakeSessionRecordByGuid(
+        @Path("guid") guid: String
     ): BasicApiResponseModel<StockTakeSessionRecordModel>
 
     @GET(Core2Config.DOMAIN_URL_PREFIX + "stocktake-record" + "/query")
     suspend fun getStokeTakeSessionRecordByCriteria(
-        @Query("guid_session_hdr") guid_session_hdr: String,
-        @Query("guid_session_device") guid_session_device: String,
+        @Query("guid_session_hdr") guid_session_hdr: String = "",
+        @Query("guid_session_device") guid_session_device: String = "",
         @Query("calcTotalRecords") calcTotalRecords: Boolean = true,
+        @Query("limit") limit: Int = 100,
         @Query("offset") offset: Int = 0
     ): PagingResponseModel<StockTakeSessionRecordModel>
 
-    //TODO: Create Model and Fill up Criteria
-//    @GET(Core2Config.DOMAIN_URL_PREFIX + "stocktake-record" + "inv-item-devices/query")
-//    suspend fun getStockTakeRecordWithInvItemByCriteria(
-//    ): BasicApiResponseModel<StockTakeSessionRecordInvItemDeviceModel>
+    @GET(Core2Config.DOMAIN_URL_PREFIX + "stocktake-record" + "/inv-item-devices" + "/query")
+    suspend fun getStockTakeRecordWithInvItemByCriteria(
+        @Query("guid_session_hdr") guid_session_hdr: String = "",
+        @Query("guid_session_device") guid_session_device: String = "",
+        @Query("calcTotalRecords") calcTotalRecords: Boolean = true,
+        @Query("limit") limit: Int = 100,
+        @Query("offset") offset: Int = 0
+    ): PagingResponseModel<StockTakeSessionRecordInvItemDeviceModel>
 
+
+    /*
+    * InventoryItemController
+    * */
+    @GET(Core2Config.DOMAIN_URL_PREFIX + "inv-items/" + "stock-take/items/backoffice-ep" + "/{item_code}" + "/{location_guid}")
+    suspend fun getInventoryItemFromItemCode(
+        @Path("item_code") item_code: String,
+        @Path("location_guid") location_guid: String
+    ): BasicApiResponseModel<StockTakeSessionRecordModel>
+
+    @GET(Core2Config.DOMAIN_URL_PREFIX + "inv-items/" + "stock-take/serial-batch/backoffice-ep" + "/{scan_code}" + "/{location_guid}")
+    suspend fun getInventoryItemFromSerialOrBatch(
+        @Path("scan_code") scan_code: String,
+        @Path("location_guid") location_guid: String
+    ): BasicApiResponseModel<StockTakeSessionRecordModel>
 }

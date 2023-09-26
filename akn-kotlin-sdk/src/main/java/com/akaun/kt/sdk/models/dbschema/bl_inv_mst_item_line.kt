@@ -11,6 +11,7 @@ data class bl_inv_mst_item_line(
     var client_source: Any? = null,
     var client_value: Any? = null,
     var code: String? = null,
+    var uom: String? = null,
     var created_date: String? = null,
     var descr: Any? = null,
     var dim_height: Double? = null,

@@ -76,15 +76,15 @@ interface StockTakeRecordService {
     /*
     * InventoryItemController
     * */
-    @GET(Core2Config.DOMAIN_URL_PREFIX + "inv-items/" + "stock-take/items/backoffice-ep" + "/{item_code}" + "/{location_guid}")
+    @GET(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.INV_MODULE_PREFIX + "inv-items/" + "stock-take/items/backoffice-ep")
     suspend fun getInventoryItemFromItemCode(
-        @Path("item_code") item_code: String,
-        @Path("location_guid") location_guid: String
+        @Query("item_code") item_code: String = "",
+        @Query("location_guid") location_guid: String = ""
     ): BasicApiResponseModel<StockTakeSessionRecordModel>
 
-    @GET(Core2Config.DOMAIN_URL_PREFIX + "inv-items/" + "stock-take/serial-batch/backoffice-ep" + "/{scan_code}" + "/{location_guid}")
+    @GET(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.INV_MODULE_PREFIX + "inv-items/" + "stock-take/serial-batch/backoffice-ep")
     suspend fun getInventoryItemFromSerialOrBatch(
-        @Path("scan_code") scan_code: String,
-        @Path("location_guid") location_guid: String
+        @Query("scan_code") scan_code: String = "",
+        @Query("location_guid") location_guid: String = ""
     ): BasicApiResponseModel<StockTakeSessionRecordModel>
 }

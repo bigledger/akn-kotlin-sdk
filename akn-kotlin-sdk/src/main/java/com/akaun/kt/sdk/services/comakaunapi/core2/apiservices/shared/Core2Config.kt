@@ -49,6 +49,7 @@ class Core2Config {
         const val CMS_PREFIX = "cms/"
         const val DGMKT_MODULE_PREFIX = "dgmkt/"
         const val INV_PREFIX = "inv/"
+        const val INV_MODULE_PREFIX = "inv/"
         const val GENERIC_PREFIX = "gen-doc/"
         const val GENERIC_DOC_PREFIX = "generic-doc/"
         const val PRINT_PREFIX = "prt/"

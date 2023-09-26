@@ -1,5 +1,6 @@
 package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.stockservices
 
+import com.akaun.kt.sdk.models.aggregates.erp.inventoryitem.InventoryItemModel
 import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionHeaderModel
 import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionRecordInvItemDeviceModel
 import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionRecordModel
@@ -80,11 +81,11 @@ interface StockTakeRecordService {
     suspend fun getInventoryItemFromItemCode(
         @Query("item_code") item_code: String = "",
         @Query("location_guid") location_guid: String = ""
-    ): BasicApiResponseModel<StockTakeSessionRecordModel>
+    ): ApiResponseModel<InventoryItemModel>
 
     @GET(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.INV_MODULE_PREFIX + "inv-items/" + "stock-take/serial-batch/backoffice-ep")
     suspend fun getInventoryItemFromSerialOrBatch(
         @Query("scan_code") scan_code: String = "",
         @Query("location_guid") location_guid: String = ""
-    ): BasicApiResponseModel<StockTakeSessionRecordModel>
+    ): ApiResponseModel<InventoryItemModel>
 }

@@ -41,7 +41,7 @@ interface StockTakeRecordService {
         @Body stockTakeSessionRecordModel: StockTakeSessionRecordModel
     ): ApiResponseModel<StockTakeSessionRecordModel>
 
-    @DELETE(Core2Config.DOMAIN_URL_PREFIX + "stocktake-record")
+    @DELETE(Core2Config.DOMAIN_URL_PREFIX + "stocktake-record/{guid}")
     suspend fun deleteStokeTakeSessionRecord(
         @Path("guid") guid: String
     ): BasicApiResponseModel<Boolean>

@@ -1,7 +1,6 @@
-package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.stockservices
+package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.`stock-services`
 
 import com.akaun.kt.sdk.models.aggregates.erp.inventoryitem.InventoryItemModel
-import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionHeaderModel
 import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionRecordInvItemDeviceModel
 import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionRecordModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.ApiResponseModel

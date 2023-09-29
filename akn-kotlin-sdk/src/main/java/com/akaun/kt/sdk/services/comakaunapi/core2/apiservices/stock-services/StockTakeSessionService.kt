@@ -1,4 +1,4 @@
-package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.stockservices
+package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.`stock-services`
 
 import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionDeviceModel
 import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionHeaderModel
@@ -6,7 +6,6 @@ import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.ApiRespons
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.BasicApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.PagingResponseModel
-import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST

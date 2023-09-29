@@ -1,7 +1,7 @@
 package com.akaun.kt.sdk.models.dbschema
 
 import com.akaun.kt.sdk.model.table.LogJson
-import com.akaun.kt.sdk.models.dbschema.emptyclasses.ParameterJson
+import com.akaun.kt.sdk.models.dbschema.intermediate.ParameterJson
 
 data class bl_inv_mst_item_line(
     var amount: Any? = null,

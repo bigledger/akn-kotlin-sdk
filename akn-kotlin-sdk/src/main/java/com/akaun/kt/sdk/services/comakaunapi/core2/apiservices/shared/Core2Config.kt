@@ -36,6 +36,7 @@ class Core2Config {
         const val CUSTOM_PREFIX = "cm/"
         const val PGW_PREFIX = "pgw/"
         const val ERP_PREFIX = "erp/"
+        const val GEN_DOC_PREFIX = "gen-doc/"
         const val AAT_PREFIX = "aat/"
         const val CLAIMS_PREFIX = "claims/"
         const val CONFIG_PREFIX = "config/"

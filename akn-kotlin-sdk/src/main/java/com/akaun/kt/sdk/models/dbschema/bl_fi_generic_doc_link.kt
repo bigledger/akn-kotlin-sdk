@@ -1,6 +1,6 @@
 package com.akaun.kt.sdk.models.dbschema
 
-import com.akaun.kt.sdk.model.table.LogJson
+import com.akaun.kt.sdk.models.dbschema.intermediate.LogJson
 
 data class bl_fi_generic_doc_link(
     var acl_config: Any? = null,

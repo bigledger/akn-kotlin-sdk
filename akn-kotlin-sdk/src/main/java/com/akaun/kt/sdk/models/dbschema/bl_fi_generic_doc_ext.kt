@@ -1,6 +1,6 @@
 package com.akaun.kt.sdk.models.dbschema
 
-import com.akaun.kt.sdk.model.table.PropertyJson
+import com.akaun.kt.sdk.models.dbschema.intermediate.PropertyJson
 import com.akaun.kt.sdk.models.dbschema.intermediate.ParamOptionJson
 import com.akaun.kt.sdk.models.dbschema.intermediate.ValueJson
 

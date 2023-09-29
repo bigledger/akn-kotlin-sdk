@@ -1,3 +1,3 @@
-package com.akaun.kt.sdk.model.table
+package com.akaun.kt.sdk.models.dbschema.intermediate
 
 class LogJson

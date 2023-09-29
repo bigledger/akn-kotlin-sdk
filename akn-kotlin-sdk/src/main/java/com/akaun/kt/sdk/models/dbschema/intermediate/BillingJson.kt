@@ -1,4 +1,6 @@
-package com.akaun.kt.app.inventory.stocktransfer.model.stocktransferout
+package com.akaun.kt.sdk.models.dbschema.intermediate
+
+import com.akaun.kt.sdk.models.dbschema.intermediate.BillingInfo
 
 data class BillingJson(
     val billingInfo: BillingInfo?

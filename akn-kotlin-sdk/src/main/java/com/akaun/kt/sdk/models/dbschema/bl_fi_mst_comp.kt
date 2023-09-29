@@ -1,7 +1,7 @@
 package com.akaun.kt.sdk.models.dbschema
 
-import com.akaun.kt.sdk.model.table.LogJson
-import com.akaun.kt.sdk.model.table.PropertyJson
+import com.akaun.kt.sdk.models.dbschema.intermediate.LogJson
+import com.akaun.kt.sdk.models.dbschema.intermediate.PropertyJson
 
 data class bl_fi_mst_comp(
     var abbreviation: String? = null,

@@ -1,3 +1,3 @@
-package com.akaun.kt.app.inventory.stocktransfer.model.stocktransferout
+package com.akaun.kt.sdk.models.dbschema.intermediate
 
 class EntityJson

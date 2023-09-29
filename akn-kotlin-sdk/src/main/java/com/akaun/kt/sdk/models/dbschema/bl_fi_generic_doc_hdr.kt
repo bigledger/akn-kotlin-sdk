@@ -1,7 +1,7 @@
 package com.akaun.kt.sdk.models.dbschema
 
-import com.akaun.kt.app.inventory.stocktransfer.model.stocktransferout.BillingJson
-import com.akaun.kt.app.inventory.stocktransfer.model.stocktransferout.DeliveryOption
+import com.akaun.kt.sdk.models.dbschema.intermediate.BillingJson
+import com.akaun.kt.sdk.models.dbschema.intermediate.DeliveryOption
 import com.akaun.kt.sdk.models.dbschema.intermediate.CancelInfoJson
 import com.akaun.kt.sdk.models.dbschema.intermediate.DeliveryEntityJson
 import com.akaun.kt.sdk.models.dbschema.intermediate.DocEntityHdrJson

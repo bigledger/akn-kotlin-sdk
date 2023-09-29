@@ -1,6 +1,6 @@
 package com.akaun.kt.sdk.models.dbschema
 
-import com.akaun.kt.sdk.model.table.PropertyJson
+import com.akaun.kt.sdk.models.dbschema.intermediate.PropertyJson
 
 data class bl_fi_mst_comp_ext(
     var compHdrGuid: String? = null,

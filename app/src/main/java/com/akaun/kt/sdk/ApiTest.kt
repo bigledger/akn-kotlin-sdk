@@ -2,7 +2,7 @@ package com.akaun.kt.sdk
 
 import android.util.Log
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
-import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.`stock-services`.StockTakeSessionService
+import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.stockservices.StockTakeSessionService
 import com.akaun.kt.sdk.utils.client.RetrofitClient
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers

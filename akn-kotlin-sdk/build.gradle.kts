@@ -20,6 +20,8 @@ dependencies {
     api (libs.okhttp.logging)
     // okhttp core
     api (libs.okhttp.core)
+    // sandwich library model retrofit responses
+    api (libs.sandwich)
 }
 
 publishing {

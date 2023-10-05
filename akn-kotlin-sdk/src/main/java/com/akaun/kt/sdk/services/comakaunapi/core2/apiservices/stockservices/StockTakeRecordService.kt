@@ -94,7 +94,7 @@ interface StockTakeRecordService {
     * SerialNumberController
     */
     @GET(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.INV_MODULE_PREFIX + "serial-numbers" + "/query")
-    suspend fun getSerialNumbersByCriteria(
+    fun getSerialNumbersByCriteria(
         @Query("sn_id") sn_id: String = "",
         @Query("sn_ids") sn_ids: Set<String> = emptySet(),
         @Query("hdr_item_guid") hdr_item_guid: String = "",

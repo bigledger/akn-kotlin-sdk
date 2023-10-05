@@ -8,6 +8,7 @@ import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.ApiRespons
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.BasicApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.PagingResponseModel
+import com.skydoves.sandwich.ApiResponse
 import retrofit2.http.Body
 import retrofit2.http.DELETE
 import retrofit2.http.GET
@@ -102,6 +103,6 @@ interface StockTakeRecordService {
         @Query("calcTotalRecords") calcTotalRecords: Boolean = true,
         @Query("limit") limit: Int = 100,
         @Query("offset") offset: Int = 0
-    ): PagingResponseModel<SerialNumberModel>
+    ): ApiResponse<PagingResponseModel<SerialNumberModel>>
 
 }

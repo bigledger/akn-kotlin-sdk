@@ -7,6 +7,7 @@ import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.BasicApiRe
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.PagingResponseModel
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.PUT
@@ -67,5 +68,10 @@ interface StockTakeDeviceService {
     suspend fun updateStockTakeSessionDevice(
         stockTakeSessionDeviceModel: StockTakeSessionDeviceModel
     ) : BasicApiResponseModel<StockTakeSessionDeviceModel>
+
+    @DELETE(Core2Config.DOMAIN_URL_PREFIX + "stocktake-device/{guid}")
+    suspend fun deleteStockTakeSessionDevice(
+        guid: String
+    ) : BasicApiResponseModel<Boolean>
 
 }

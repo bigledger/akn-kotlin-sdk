@@ -71,7 +71,7 @@ interface StockTakeDeviceService {
 
     @DELETE(Core2Config.DOMAIN_URL_PREFIX + "stocktake-device/{guid}")
     suspend fun deleteStockTakeSessionDevice(
-        guid: String
+        @Path("guid") guid: String
     ) : BasicApiResponseModel<Boolean>
 
 }

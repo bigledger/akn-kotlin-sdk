@@ -3,7 +3,7 @@ package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared
 import com.akaun.kt.sdk.models.dbschema.bl_fi_mst_entity_login_subject_link
 
 data class BasicApiResponseModel<T>(
-    val code: String,
+    val code: String?,
     val message: String?,
     val data: T?
 )
@@ -20,7 +20,7 @@ data class PagingResponseModel<T>(
     val offset: Int,
     val limit: Int,
     val code: String,
-    val message: String
+    val message: String?
 )
 
 // Additional attributes excluded

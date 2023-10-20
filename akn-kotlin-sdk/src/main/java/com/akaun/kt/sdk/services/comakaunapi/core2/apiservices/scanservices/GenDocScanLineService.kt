@@ -51,7 +51,7 @@ interface GenDocScanLineService {
         @Query("item_code") item_code: String? = null,
         @Query("ean_code") ean_code: String? = null,
         @Query("serial_number") serial_number: String? = null,
-    ): ApiResponseModel<GenericDocumentScanLineModel>
+    ): PagingResponseModel<GenericDocumentScanLineModel>
 
     /*
     * InventoryItemController

@@ -31,13 +31,13 @@ data class GenericDocumentDto(
     val sales_entity_hdr_guids: Set<String?>? = null,
     val hdr_track_delivery_guids: Set<String?>? = null,
     val hdr_track_production_guids: Set<String?>? = null,
-    val limit: String? = null,
+    val limit: Int,
     val search_word: String? = null,
     val marketplace_status: String? = null,
     val mkt_payment_status: String? = null,
     val mkt_order_no: String? = null,
     val snapshot: String? = null,
-    val order: String? = null,
-    val orderBy: String? = null,
+    val order: String,
+    val orderBy: String,
     val status: String? = null
 )

@@ -66,7 +66,7 @@ interface StockTakeDeviceService {
 
     @PUT(Core2Config.DOMAIN_URL_PREFIX + "stocktake-device")
     suspend fun updateStockTakeSessionDevice(
-        stockTakeSessionDeviceModel: StockTakeSessionDeviceModel
+        @Body stockTakeSessionDeviceModel: StockTakeSessionDeviceModel
     ) : BasicApiResponseModel<StockTakeSessionDeviceModel>
 
     @DELETE(Core2Config.DOMAIN_URL_PREFIX + "stocktake-device/{guid}")

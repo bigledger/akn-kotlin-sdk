@@ -19,4 +19,10 @@ interface BaseGenDocTypeService {
         @Path("docType") docType: String,
         @Body genericDocumentDto: GenericDocumentDto
     ): PagingResponseModel<GenericDocumentModel>
+
+//    @POST(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.GEN_DOC_PREFIX +  "{docType}/custom/query/snapshot/backoffice-ep")
+//    suspend fun getGenericDocumentByDTOSnapshot(
+//        @Path("docType") docType: String,
+//        @Body genericDocumentDto: GenericDocumentDto
+//    ): PagingResponseModel<GenericDocumentModel>
 }

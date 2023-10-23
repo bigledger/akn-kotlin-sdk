@@ -10,6 +10,7 @@ import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Confi
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.PagingResponseModel
 import com.skydoves.sandwich.ApiResponse
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.PUT
@@ -52,6 +53,11 @@ interface GenDocScanLineService {
         @Query("ean_code") ean_code: String? = null,
         @Query("serial_number") serial_number: String? = null,
     ): PagingResponseModel<GenericDocumentScanLineModel>
+
+    @DELETE(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.GENERIC_DOC_PREFIX + "scan-lines" + "/backoffice-ep/{guid}")
+    suspend fun deleteGenDocScanLine(
+        @Path("guid") guid: String
+    ): BasicApiResponseModel<Boolean>
 
     /*
     * InventoryItemController

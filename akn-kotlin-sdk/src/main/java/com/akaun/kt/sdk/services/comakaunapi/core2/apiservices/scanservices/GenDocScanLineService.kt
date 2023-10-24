@@ -1,5 +1,6 @@
 package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.scanservices
 
+import com.akaun.kt.sdk.models.aggregates.erp.gendoc.GenericDocumentScanLineItemQtyContainer
 import com.akaun.kt.sdk.models.aggregates.erp.gendoc.GenericDocumentScanLineModel
 import com.akaun.kt.sdk.models.aggregates.erp.inventoryitem.InventoryItemModel
 import com.akaun.kt.sdk.models.aggregates.erp.inventoryitem.SerialNumberModel
@@ -42,6 +43,11 @@ interface GenDocScanLineService {
     suspend fun getByGuidGenDocScanLine(
         @Path("guid") guid: String
     ): BasicApiResponseModel<GenericDocumentScanLineModel>
+
+    @GET(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.GENERIC_DOC_PREFIX + "scan-lines" + "/backoffice-ep/qty-discrepancy/{genDocHdrGuid}")
+    suspend fun getQtyDiscrepancyByHdrGuid(
+        @Path("genDocHdrGuid") genDocHdrGuid: String
+    ): ApiResponseModel<GenericDocumentScanLineItemQtyContainer>
 
     @GET(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.GENERIC_DOC_PREFIX + "scan-lines" + "/backoffice-ep/query")
     suspend fun getByCriteriaGenDocScanLine(

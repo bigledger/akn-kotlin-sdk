@@ -5,6 +5,7 @@ import com.akaun.kt.sdk.models.aggregates.erp.gendoc.GenericDocumentScanLineMode
 import com.akaun.kt.sdk.models.aggregates.erp.inventoryitem.InventoryItemModel
 import com.akaun.kt.sdk.models.aggregates.erp.inventoryitem.SerialNumberModel
 import com.akaun.kt.sdk.models.aggregates.erp.stock.StockTakeSessionHeaderModel
+import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.invitemservices.Core2UrlInvItemHdrPrefix
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.ApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.BasicApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
@@ -84,6 +85,7 @@ interface GenDocScanLineService {
         @Query("scan_code") scan_code: String = "",
         @Query("location_guid") location_guid: String = ""
     ): ApiResponseModel<InventoryItemModel>
+
 
     /*
     * SerialNumberController

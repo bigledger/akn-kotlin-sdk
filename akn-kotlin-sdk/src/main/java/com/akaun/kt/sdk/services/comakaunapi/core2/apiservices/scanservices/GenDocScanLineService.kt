@@ -68,6 +68,11 @@ interface GenDocScanLineService {
     /*
     * InventoryItemController
     */
+    @GET(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.INV_MODULE_PREFIX + "inv-items/" + "backoffice-ep/{guid}")
+    suspend fun getInventoryItemByGuid(
+        @Path("guid") guid: String
+    ): BasicApiResponseModel<InventoryItemModel>
+
     @GET(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.INV_MODULE_PREFIX + "inv-items/" + "stock-take/items/backoffice-ep")
     suspend fun getInventoryItemFromItemCode(
         @Query("item_code") item_code: String = "",

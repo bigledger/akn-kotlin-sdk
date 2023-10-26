@@ -3,21 +3,21 @@ package com.akaun.kt.app.delivery.driverapp.model.userprofile
 import com.akaun.kt.sdk.models.dbschema.intermediate.PropertyJson
 
 data class app_login_subject(
-    val account_type: Any?,
-    val category: String?,
-    val contact_key_guid: Any?,
-    val created_date: String?,
-    val description: String?,
-    val guid: String?,
-    val main_email: String?,
-    val main_phone: String?,
-    val name: String?,
-    val name_first: String?,
-    val name_last: String?,
-    val property_json: PropertyJson?,
-    val rank: Any?,
-    val revision: String?,
-    val status: String?,
-    val updated_date: String?,
-    val vrsn: Any?
+    var account_type: Any? = null,
+    var category: String? = null,
+    var contact_key_guid: Any? = null,
+    var created_date: String? = null,
+    var description: String? = null,
+    var guid: String? = null,
+    var main_email: String? = null,
+    var main_phone: String? = null,
+    var name: String? = null,
+    var name_first: String? = null,
+    var name_last: String? = null,
+    var property_json: PropertyJson? = null,
+    var rank: Any? = null,
+    var revision: String? = null,
+    var status: String? = null,
+    var updated_date: String? = null,
+    var vrsn: Any? = null
 )

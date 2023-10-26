@@ -1,17 +1,17 @@
 package com.akaun.kt.app.delivery.driverapp.model.userprofile
 
 data class app_login_principal(
-    val created_date: String?,
-    val credential: Any?,
-    val guid: String?,
-    val principal_id: String?,
-    val principal_type: String?,
-    val principal_value: Any?,
-    val revision: String?,
-    val status: String?,
-    val subject_guid: String?,
-    val updated_date: String?,
-    val valid_date_end: String?,
-    val valid_date_start: String?,
-    val vrsn: Any?
+    var created_date: String? = null,
+    var credential: Any? = null,
+    var guid: String? = null,
+    var principal_id: String? = null,
+    var principal_type: String? = null,
+    var principal_value: Any? = null,
+    var revision: String? = null,
+    var status: String? = null,
+    var subject_guid: String? = null,
+    var updated_date: String? = null,
+    var valid_date_end: String? = null,
+    var valid_date_start: String? = null,
+    var vrsn: Any? = null
 )

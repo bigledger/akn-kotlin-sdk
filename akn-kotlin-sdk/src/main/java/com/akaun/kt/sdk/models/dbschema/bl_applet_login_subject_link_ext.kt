@@ -1,5 +1,7 @@
 package com.akaun.kt.app.inventory.stocktransfer.model.appletloginsubject
 
+import com.akaun.kt.sdk.models.dbschema.intermediate.ValueJson
+
 data class bl_applet_login_subject_link_ext(
     val created_date: Any?,
     val ext_code: Any?,

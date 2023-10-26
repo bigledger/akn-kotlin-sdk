@@ -19,7 +19,7 @@ data class bl_applet_login_subject_link_ext(
     val updated_date: String?,
     val value_datetime: Any?,
     val value_file: Any?,
-    val value_json: ValueJson?,
+    val value_json: Any?,
     val value_numeric: Any?,
     val value_string: Any?,
     val vrsn: Any?

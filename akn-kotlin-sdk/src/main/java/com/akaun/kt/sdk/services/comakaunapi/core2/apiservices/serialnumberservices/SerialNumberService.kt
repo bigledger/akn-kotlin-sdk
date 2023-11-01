@@ -22,7 +22,7 @@ interface SerialNumberService{
     @POST(Core2UrlSerialNumberPrefix.PREFIX +  "multi-validation")
     suspend fun validateSerialNumbers(
         @Body serialNumberValidationDto: SerialNumberValidationDto
-    ): BasicApiResponseModel<SerialNumberValidationDto>
+    ): ApiResponse<BasicApiResponseModel<SerialNumberValidationDto>>
 
     @POST(Core2UrlSerialNumberPrefix.PREFIX +  "validation")
     suspend fun validateSerialNumberList(

@@ -1,11 +1,12 @@
 package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.serialnumberservices
 
-import com.akaun.kt.app.inventory.stocktransfer.model.serialnumbers.SerialNumberStatus
-import com.akaun.kt.app.inventory.stocktransfer.model.serialnumbers.SerialNumberValidationDto
+import com.akaun.kt.sdk.models.aggregates.erp.serialnumber.SerialNumberStatus
+import com.akaun.kt.sdk.services.comakaunapi.core2.dto.SerialNumberValidationDto
 import com.akaun.kt.sdk.models.aggregates.erp.inventoryitem.SerialNumberModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.BasicApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.PagingResponseModel
+import com.akaun.kt.sdk.services.comakaunapi.core2.dto.SerialNumberValidationOutputDto
 import com.skydoves.sandwich.ApiResponse
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -21,12 +22,12 @@ interface SerialNumberService{
     @POST(Core2UrlSerialNumberPrefix.PREFIX +  "multi-validation")
     suspend fun validateSerialNumbers(
         @Body serialNumberValidationDto: SerialNumberValidationDto
-    ): BasicApiResponseModel<SerialNumberValidationDto>
+    ): ApiResponse<BasicApiResponseModel<SerialNumberValidationDto>>
 
     @POST(Core2UrlSerialNumberPrefix.PREFIX +  "validation")
     suspend fun validateSerialNumberList(
         @Body serialNumberValidationDto: SerialNumberValidationDto
-    ): BasicApiResponseModel<SerialNumberStatus>
+    ): BasicApiResponseModel<SerialNumberValidationOutputDto>
 
     @GET(Core2UrlSerialNumberPrefix.PREFIX + "query")
     suspend fun getSerialNumbersByCriteria(

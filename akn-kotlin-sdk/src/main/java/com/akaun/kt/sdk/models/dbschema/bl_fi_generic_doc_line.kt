@@ -1,11 +1,11 @@
 package com.akaun.kt.sdk.models.dbschema
 
+import com.akaun.kt.sdk.models.dbschema.intermediate.ItemPropertyJson
 import com.akaun.kt.sdk.models.dbschema.intermediate.BatchNo
 import com.akaun.kt.sdk.models.dbschema.intermediate.BinNo
 import com.akaun.kt.sdk.models.dbschema.intermediate.DeliveryOption
 import com.akaun.kt.sdk.models.dbschema.intermediate.EntityJson
 import com.akaun.kt.sdk.models.dbschema.intermediate.LogJson
-import com.akaun.kt.sdk.models.dbschema.intermediate.ItemPropertyJson
 import com.akaun.kt.sdk.models.dbschema.intermediate.LinePropertyJson
 import com.akaun.kt.sdk.models.dbschema.intermediate.SerialNo
 

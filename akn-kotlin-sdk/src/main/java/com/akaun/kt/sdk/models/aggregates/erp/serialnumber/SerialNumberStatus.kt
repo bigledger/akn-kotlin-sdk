@@ -1,4 +1,4 @@
-package com.akaun.kt.app.inventory.stocktransfer.model.serialnumbers
+package com.akaun.kt.sdk.models.aggregates.erp.serialnumber
 
 data class SerialNumberStatus(
     var sn_id: String? = null,

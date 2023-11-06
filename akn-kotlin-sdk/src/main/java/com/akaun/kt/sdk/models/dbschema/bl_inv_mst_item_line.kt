@@ -30,7 +30,7 @@ data class bl_inv_mst_item_line(
     var name: String? = null,
     var parameter_attributes: Any? = null,
     var parameter_code: String? = null,
-    var parameter_json: ParameterJson? = null,
+    var parameter_json: Any? = null,
     var parameter_name: String? = null,
     var parameter_type: String? = null,
     var parameter_value: String? = null,

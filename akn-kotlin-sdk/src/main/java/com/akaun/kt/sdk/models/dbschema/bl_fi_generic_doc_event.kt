@@ -22,7 +22,7 @@ data class bl_fi_generic_doc_event(
     var id_user: Any? = null,
     var id_user_agent: Any? = null,
     var link_guid: Any? = null,
-    var message_json: MessageJson? = null,
+    var message_json: Any? = null,
     var module_guid: Any? = null,
     var namespace: Any? = null,
     var property_json: Any? = null,

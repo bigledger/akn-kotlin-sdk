@@ -7,7 +7,7 @@ data class bl_del_trip_driver_link(
     var namespace: String? = null,
     var applet_guid: String? = null,
     var module_guid: String? = null,
-    var property_json: Map<String, Any>? = null,
+    var property_json: Any? = null,
     var acl_config: Map<String, Any>? = null,
     var acl_policy: Map<String, Any>? = null,
     var created_by_subject_guid: String? = null,

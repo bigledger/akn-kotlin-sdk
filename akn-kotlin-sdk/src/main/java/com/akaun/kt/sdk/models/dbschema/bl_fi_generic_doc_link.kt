@@ -29,7 +29,7 @@ data class bl_fi_generic_doc_link(
     var guid_doc_2_hdr: String? = null,
     var guid_doc_2_line: String? = null,
     var guid_doc_event: Any? = null,
-    var log_json: LogJson? = null,
+    var log_json: Any? = null,
     var logic: Any? = null,
     var module_guid: Any? = null,
     var namespace: Any? = null,

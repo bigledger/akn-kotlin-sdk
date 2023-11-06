@@ -14,7 +14,7 @@ data class app_login_subject(
     var name: String? = null,
     var name_first: String? = null,
     var name_last: String? = null,
-    var property_json: PropertyJson? = null,
+    var property_json: Any? = null,
     var rank: Any? = null,
     var revision: String? = null,
     var status: String? = null,

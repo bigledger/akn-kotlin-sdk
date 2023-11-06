@@ -14,7 +14,7 @@ data class bl_fi_mst_comp_ext(
     var paramName: String? = null,
     var paramOptionJson: Any? = null,
     var paramType: String? = null,
-    var propertyJson: PropertyJson? = null,
+    var propertyJson: Any? = null,
     var revision: String? = null,
     var status: String? = null,
     var updatedDate: String? = null,

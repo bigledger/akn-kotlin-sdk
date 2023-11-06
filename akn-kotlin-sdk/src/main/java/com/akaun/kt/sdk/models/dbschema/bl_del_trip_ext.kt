@@ -1,0 +1,32 @@
+package com.akaun.kt.app.delivery.driverapp.model.trip
+
+data class bl_del_trip_ext(
+    var guid: String? = null,
+    var namespace: String? = null,
+    var moduleGuid: String? = null,
+    var appletGuid: String? = null,
+    var hdrGuid: String? = null,
+    var extType: String? = null,
+    var extCode: String? = null,
+    var extOption: String? = null,
+    var propertyJson: String? = null,
+    var objType: String? = null,
+    var paramCode: String? = null,
+    var paramName: String? = null,
+    var paramType: String? = null,
+    var paramOptionJson: String? = null,
+    var valueString: String? = null,
+    var valueFile: String? = null,
+    var valueNumeric: String? = null,
+    var valueDatetime: String? = null,
+    var valueJson: String? = null,
+    var createdDate: String? = null,
+    var updatedDate: String? = null,
+    var status: String? = null,
+    var revision: String? = null,
+    var vrsn: String? = null,
+    var createdBySubjectGuid: String? = null,
+    var updatedBySubjectGuid: String? = null,
+    var aclConfig: String? = null,
+    var aclPolicy: String? = null
+)

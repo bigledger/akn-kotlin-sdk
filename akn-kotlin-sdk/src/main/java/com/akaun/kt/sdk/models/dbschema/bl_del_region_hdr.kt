@@ -1,0 +1,33 @@
+package com.akaun.kt.app.delivery.driverapp.model.trip
+
+data class bl_del_region_hdr(
+    val acl_config: Any?,
+    val acl_policy: Any?,
+    val applet_guid: Any?,
+    val code: Any?,
+    val country: String?,
+    val created_by_subject_guid: String?,
+    val date_created: String?,
+    val date_updated: String?,
+    val descr: String?,
+    val geofencing_json: Any?,
+    val goog_polyline_complex: Any?,
+    val google_location_name: String?,
+    val google_location_url: String?,
+    val guid: String?,
+    val label_list_guid: Any?,
+    val level_value: Any?,
+    val module_guid: Any?,
+    val name: Any?,
+    val namespace: Any?,
+    val obj_type: Any?,
+    val property_json: Any?,
+    val region: String?,
+    val region_code: String?,
+    val revision: String?,
+    val state: String?,
+    val status: String?,
+    val updated_by_subject_guid: String?,
+    val usage_type: String?,
+    val vrsn: Any?
+)

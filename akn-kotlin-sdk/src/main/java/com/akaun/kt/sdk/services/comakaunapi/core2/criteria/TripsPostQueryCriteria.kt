@@ -1,4 +1,4 @@
-package com.akaun.kt.app.delivery.driverapp.model.trip
+package com.akaun.kt.sdk.services.comakaunapi.core2.criteria
 
 data class TripsPostQueryCriteria(
     var label_list_guids: Set<String?>? = null,

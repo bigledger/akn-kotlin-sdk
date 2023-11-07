@@ -1,7 +1,7 @@
 package com.akaun.kt.app.delivery.driverapp.network
 
 
-import com.akaun.kt.app.delivery.driverapp.model.job.JobsDto
+import com.akaun.kt.sdk.services.comakaunapi.core2.dto.JobsDto
 import com.akaun.kt.sdk.models.aggregates.erp.pickpackqueue.FinanciaPickPackQueueModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.ApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config

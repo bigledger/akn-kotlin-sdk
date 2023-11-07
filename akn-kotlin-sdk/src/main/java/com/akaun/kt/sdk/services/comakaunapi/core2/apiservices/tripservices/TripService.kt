@@ -1,8 +1,8 @@
 package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.tripservices
 
 
-import com.akaun.kt.app.delivery.driverapp.model.trip.DriverTripQueryCriteria
-import com.akaun.kt.app.delivery.driverapp.model.trip.TripsPostQueryCriteria
+import com.akaun.kt.sdk.services.comakaunapi.core2.criteria.DriverTripQueryCriteria
+import com.akaun.kt.sdk.services.comakaunapi.core2.criteria.TripsPostQueryCriteria
 import com.akaun.kt.sdk.models.aggregates.erp.trip.TripsDriverVehicleModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.PagingResponseModel

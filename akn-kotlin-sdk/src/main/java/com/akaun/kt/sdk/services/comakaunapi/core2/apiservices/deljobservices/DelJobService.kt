@@ -1,6 +1,6 @@
-package com.akaun.kt.app.delivery.driverapp.network
+package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.deljobservices
 
-import com.akaun.kt.app.delivery.driverapp.model.job.JobsDeliveryStatusDto
+import com.akaun.kt.sdk.services.comakaunapi.core2.dto.JobsDeliveryStatusDto
 import com.akaun.kt.sdk.models.aggregates.erp.deljob.JobModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.ApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.BasicApiResponseModel
@@ -42,7 +42,7 @@ interface DelJobService {
         @Path("guid") guid : String
     ) : BasicApiResponseModel<JobsDeliveryStatusDto>
 
-    @PUT(Core2UrlJobPrefix.PREFIX )
+    @PUT(Core2UrlJobPrefix.PREFIX)
     suspend fun updateJob(
         @Body jobModel: JobModel
     ) : BasicApiResponseModel<JobModel>

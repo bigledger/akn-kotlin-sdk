@@ -1,4 +1,4 @@
-package com.akaun.kt.app.delivery.driverapp.model.trip
+package com.akaun.kt.sdk.models.dbschema
 
 data class bl_del_trip_driver_link(
     var guid: String? = null,

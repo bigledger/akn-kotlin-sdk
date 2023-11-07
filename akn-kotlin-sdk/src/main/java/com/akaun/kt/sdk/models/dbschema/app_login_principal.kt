@@ -1,4 +1,4 @@
-package com.akaun.kt.app.delivery.driverapp.model.userprofile
+package com.akaun.kt.sdk.models.dbschema
 
 data class app_login_principal(
     var created_date: String? = null,

@@ -1,8 +1,8 @@
-package com.akaun.kt.app.delivery.driverapp.model.job
+package com.akaun.kt.sdk.models.dbschema
 
 data class bl_del_job_hdr(
-    val acl_config: AclConfig? = null,
-    val acl_policy: AclPolicy? = null,
+    val acl_config: Any? = null,
+    val acl_policy: Any? = null,
     val applet_guid: Any? = null,
     val code: Any? = null,
     var collection_amount: String? = null,

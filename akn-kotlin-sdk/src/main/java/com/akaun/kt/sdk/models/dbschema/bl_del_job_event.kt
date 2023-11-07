@@ -1,4 +1,4 @@
-package com.akaun.kt.app.delivery.driverapp.model.job
+package com.akaun.kt.sdk.models.dbschema
 
 data class bl_del_job_event(
     var guid: String? = null,

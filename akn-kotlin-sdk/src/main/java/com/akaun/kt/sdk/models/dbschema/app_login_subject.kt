@@ -1,4 +1,4 @@
-package com.akaun.kt.app.delivery.driverapp.model.userprofile
+package com.akaun.kt.sdk.models.dbschema
 
 import com.akaun.kt.sdk.models.dbschema.intermediate.PropertyJson
 

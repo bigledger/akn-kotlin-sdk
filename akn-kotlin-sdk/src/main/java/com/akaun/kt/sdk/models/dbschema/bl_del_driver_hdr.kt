@@ -1,4 +1,4 @@
-package com.akaun.kt.app.delivery.driverapp.model.trip
+package com.akaun.kt.sdk.models.dbschema
 
 data class bl_del_driver_hdr(
     val acl_config: Any?,

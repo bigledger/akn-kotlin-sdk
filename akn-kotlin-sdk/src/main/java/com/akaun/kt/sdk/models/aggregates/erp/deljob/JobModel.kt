@@ -1,8 +1,8 @@
 package com.akaun.kt.sdk.models.aggregates.erp.deljob
 
-import com.akaun.kt.app.delivery.driverapp.model.job.bl_del_job_event
-import com.akaun.kt.app.delivery.driverapp.model.job.bl_del_job_ext
-import com.akaun.kt.app.delivery.driverapp.model.job.bl_del_job_hdr
+import com.akaun.kt.sdk.models.dbschema.bl_del_job_event
+import com.akaun.kt.sdk.models.dbschema.bl_del_job_ext
+import com.akaun.kt.sdk.models.dbschema.bl_del_job_hdr
 import com.akaun.kt.sdk.models.dbschema.bl_del_job_attachment
 
 data class JobModel(

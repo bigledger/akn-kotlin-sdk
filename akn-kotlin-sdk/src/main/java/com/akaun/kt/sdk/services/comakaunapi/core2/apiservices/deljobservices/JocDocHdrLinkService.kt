@@ -1,4 +1,4 @@
-package com.akaun.kt.app.delivery.driverapp.network
+package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.deljobservices
 
 import com.akaun.kt.sdk.models.aggregates.erp.deljob.JobDocHdrLinkModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config

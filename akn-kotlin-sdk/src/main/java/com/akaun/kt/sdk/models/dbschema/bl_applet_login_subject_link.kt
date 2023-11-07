@@ -1,4 +1,4 @@
-package com.akaun.kt.app.inventory.stocktransfer.model.appletloginsubject
+package com.akaun.kt.sdk.models.dbschema
 
 import com.akaun.kt.sdk.models.dbschema.intermediate.PropertyJson
 

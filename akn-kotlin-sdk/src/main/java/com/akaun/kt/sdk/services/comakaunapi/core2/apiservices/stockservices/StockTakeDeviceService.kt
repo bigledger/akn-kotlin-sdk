@@ -23,7 +23,7 @@ interface StockTakeDeviceService {
 
     @PUT(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.STOCKTAKE_PREFIX + "devices/" + "backoffice-ep")
     suspend fun updateStockTakeDevice(
-        stockTakeDeviceModel: StockTakeDeviceModel
+        @Body stockTakeDeviceModel: StockTakeDeviceModel
     ) : BasicApiResponseModel<StockTakeDeviceModel>
 
     @GET(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.STOCKTAKE_PREFIX + "devices/" + "backoffice-ep")

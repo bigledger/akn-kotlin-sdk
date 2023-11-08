@@ -29,7 +29,7 @@ data class bl_del_job_shipment_link(
     var proof_rct_name: Any? = null,
     var proof_rct_phone: Any? = null,
     var proof_rct_remarks: Any? = null,
-    var property_json: String? = null,
+    var property_json: Any? = null,
     var qty_delivered: Any? = null,
     var qty_to_deliver: Any? = null,
     var quantity: Double? = null,

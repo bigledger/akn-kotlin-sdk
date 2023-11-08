@@ -19,7 +19,7 @@ data class bl_del_trip_ext(
     var valueFile: String? = null,
     var valueNumeric: String? = null,
     var valueDatetime: String? = null,
-    var valueJson: String? = null,
+    var valueJson: Any? = null,
     var createdDate: String? = null,
     var updatedDate: String? = null,
     var status: String? = null,

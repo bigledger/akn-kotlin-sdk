@@ -22,7 +22,7 @@ data class bl_inv_mst_item_line(
     var hdr_guid: String? = null,
     var item_hdr_guid: String? = null,
     var item_line_guid: String? = null,
-    var log_json: LogJson? = null,
+    var log_json: Any? = null,
     var mkt_category: String? = null,
     var mkt_guid: String? = null,
     var mkt_item_id: String? = null,

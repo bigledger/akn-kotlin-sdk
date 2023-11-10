@@ -19,22 +19,31 @@ import retrofit2.http.PUT
 import retrofit2.http.Path
 import retrofit2.http.Query
 
+
+object GenericDocScanLineUrlPrefix{
+    const val Prefix = Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.GENERIC_DOC_PREFIX + "scan-lines"
+}
 interface GenDocScanLineService {
 
     /*
     * GenericDocumentScanLineController
     */
-    @POST(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.GENERIC_DOC_PREFIX + "scan-lines" + "/backoffice-ep")
+    @POST(GenericDocScanLineUrlPrefix.Prefix + "/backoffice-ep")
     suspend fun createGenDocScanLine(
         @Body genericDocumentScanLineModel: GenericDocumentScanLineModel
     ): BasicApiResponseModel<GenericDocumentScanLineModel>
 
-    @PUT(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.GENERIC_DOC_PREFIX + "scan-lines" + "/backoffice-ep")
+    @POST(GenericDocScanLineUrlPrefix.Prefix + "/multi/backoffice-ep")
+    suspend fun createMultiGenDocScanLine(
+        @Body genericDocumentScanLineModels: List<GenericDocumentScanLineModel>
+    ): ApiResponseModel<GenericDocumentScanLineModel>
+
+    @PUT(GenericDocScanLineUrlPrefix.Prefix + "/backoffice-ep")
     suspend fun updateGenDocScanLine(
         @Body genericDocumentScanLineModel: GenericDocumentScanLineModel
     ): BasicApiResponseModel<GenericDocumentScanLineModel>
 
-    @GET(Core2Config.TENANT_DOMAIN_URL_PREFIX + Core2Config.ERP_MODULE_PREFIX + Core2Config.GENERIC_DOC_PREFIX + "scan-lines" + "/backoffice-ep")
+    @GET(GenericDocScanLineUrlPrefix.Prefix + "/backoffice-ep")
     suspend fun getAllGenDocScanLine(
         @Query("item_code") item_code: String = "",
         @Query("location_guid") location_guid: String = ""

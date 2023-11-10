@@ -124,7 +124,7 @@ data class bl_fi_generic_doc_line(
     var item_guid: String? = null,
     var item_machine_code: Any? = null,
     var item_name: String? = null,
-    var item_property_json: Any? = null,
+    var item_property_json: ItemPropertyJson? = null,
     var item_reference_no: Any? = null,
     var item_remarks: String? = null,
     var item_sub_type: String? = null,

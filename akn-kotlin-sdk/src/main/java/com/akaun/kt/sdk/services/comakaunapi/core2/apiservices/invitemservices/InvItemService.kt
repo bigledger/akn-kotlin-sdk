@@ -34,4 +34,10 @@ interface InvItemService {
         @Query("location_guid") location_guid: String = ""
     ): ApiResponseModel<InventoryItemModel>
 
+    @GET(Core2UrlInvItemPrefix.PREFIX + "backoffice-ep/query")
+    suspend fun getInventoryItemByCriteria(
+        @Query("calcTotalRecords") calcTotalRecords: Boolean = true,
+        @Query("limit") limit: Int = 10,
+        @Query("offset") offset: Int = 0
+    ): ApiResponseModel<InventoryItemModel>
 }

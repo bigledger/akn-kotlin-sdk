@@ -16,6 +16,13 @@ object BaseGenDocUrlPrefix {
 }
 
 interface BaseGenDocTypeService {
+
+    @POST(BaseGenDocUrlPrefix.PREFIX +  "{docType}")
+    suspend fun create(
+        @Path("docType") docType: String,
+        @Body genericDocumentModel: GenericDocumentModel
+    ): BasicApiResponseModel<GenericDocumentModel>
+
     @POST(BaseGenDocUrlPrefix.PREFIX +  "{docType}/custom/query/snapshot/backoffice-ep")
     suspend fun getGenericDocumentByDTOSnapshot(
         @Path("docType") docType: String,

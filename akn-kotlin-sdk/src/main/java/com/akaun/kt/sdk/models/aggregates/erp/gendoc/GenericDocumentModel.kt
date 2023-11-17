@@ -7,9 +7,9 @@ import com.akaun.kt.sdk.models.dbschema.bl_fi_generic_doc_line
 import com.akaun.kt.sdk.models.dbschema.bl_fi_generic_doc_link
 
 data class GenericDocumentModel(
-    val bl_fi_generic_doc_hdr: bl_fi_generic_doc_hdr = bl_fi_generic_doc_hdr(),
-    val bl_fi_generic_doc_ext: List<bl_fi_generic_doc_ext> = emptyList(),
-    val bl_fi_generic_doc_line: List<bl_fi_generic_doc_line> = emptyList(),
-    val bl_fi_generic_doc_event: List<bl_fi_generic_doc_event> = emptyList(),
-    val bl_fi_generic_doc_link: List<bl_fi_generic_doc_link> = emptyList()
+    var bl_fi_generic_doc_hdr: bl_fi_generic_doc_hdr = bl_fi_generic_doc_hdr(),
+    var bl_fi_generic_doc_ext: List<bl_fi_generic_doc_ext> = emptyList(),
+    var bl_fi_generic_doc_line: List<bl_fi_generic_doc_line> = emptyList(),
+    var bl_fi_generic_doc_event: List<bl_fi_generic_doc_event> = emptyList(),
+    var bl_fi_generic_doc_link: List<bl_fi_generic_doc_link> = emptyList()
 )

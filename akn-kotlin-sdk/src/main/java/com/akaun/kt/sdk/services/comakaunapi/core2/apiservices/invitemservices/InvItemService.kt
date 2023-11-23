@@ -38,6 +38,16 @@ interface InvItemService {
     suspend fun getInventoryItemByCriteria(
         @Query("calcTotalRecords") calcTotalRecords: Boolean = true,
         @Query("limit") limit: Int = 10,
-        @Query("offset") offset: Int = 0
+        @Query("offset") offset: Int = 0,
+        @Query("name") name: String? = null,
+        @Query("code") code: String? = null,
+    ): ApiResponseModel<InventoryItemModel>
+
+    @GET(Core2UrlInvItemPrefix.PREFIX + "search-name-code/backoffice-ep")
+    suspend fun getInventoryItemByNameAndCode(
+        @Query("name") name: String? = null,
+        @Query("code") code: String? = null,
+        @Query("offset") offset: Int = 0,
+        @Query("limit") limit: Int = 10,
     ): ApiResponseModel<InventoryItemModel>
 }

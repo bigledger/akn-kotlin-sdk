@@ -11,26 +11,30 @@ import retrofit2.http.POST
 import retrofit2.http.Query
 
 
+
+object LoginServicePrefix {
+    const val PREFIX = Core2Config.PLATFORM_DOMAIN_URL_PREFIX + "identity/login"
+}
 interface LoginService {
-    @POST(Core2Config.PLATFORM_DOMAIN_URL_PREFIX + "identity/login")
+    @POST(LoginServicePrefix.PREFIX)
     fun loginWithCall(
         @Body loginRequest: LoginRequest,
         @Query("tenantCode") tenantCode :String? = null
     ): Call<BasicApiResponseModel<LoginResponse>>
 
-    @POST(Core2Config.PLATFORM_DOMAIN_URL_PREFIX + "identity/login")
+    @POST(LoginServicePrefix.PREFIX)
     fun login(
         @Body loginRequest: LoginRequest,
         @Query("tenantCode") tenantCode :String? = null
     ): BasicApiResponseModel<LoginResponse>
 
-    @POST(Core2Config.PLATFORM_DOMAIN_URL_PREFIX + "identity/login/google")
+    @POST(LoginServicePrefix.PREFIX  + "/google")
     fun loginToGoogleWithCall(
         @Body loginRequest: GoogleLoginRequest,
         @Query("inviteKey") inviteKey :String? = null
     ): Call<BasicApiResponseModel<LoginResponse>>
 
-    @POST(Core2Config.PLATFORM_DOMAIN_URL_PREFIX + "identity/login/google")
+    @POST(LoginServicePrefix.PREFIX  + "/google")
     fun loginToGoogle(
         @Body loginRequest: GoogleLoginRequest,
         @Query("inviteKey") inviteKey :String? = null

@@ -18,7 +18,7 @@ interface IdentityRegistrationService{
 
 
     @POST(IdentityRegistrationPrefix.PREFIX + "/with-token/email/public-ep")
-    fun registerWithEmail(
+    suspend fun registerWithEmail(
         @Body registrationRequest: RegistrationRequest,
         @Query("tenantCode") tenantCode: String? = null,
         @Query("websiteCode") websiteCode: String? = null,
@@ -26,7 +26,7 @@ interface IdentityRegistrationService{
     ): BasicApiResponseModel<AppLoginRegistrationModel>
 
     @POST(IdentityRegistrationPrefix.PREFIX + "/with-token/mobile-number/public-ep")
-    fun registerWithMobileNumber(
+    suspend fun registerWithMobileNumber(
         @Body registrationRequest: RegistrationRequest,
         @Query("tenantCode") tenantCode: String? = null,
         @Query("websiteCode") websiteCode: String? = null,
@@ -34,22 +34,22 @@ interface IdentityRegistrationService{
     ): BasicApiResponseModel<AppLoginRegistrationModel>
 
     @GET(IdentityRegistrationPrefix.PREFIX + "/generate-token/public-ep")
-    fun generateJWTToken(
+    suspend fun generateJWTToken(
         @Query("gRecaptchaResponseToken") gRecaptchaResponseToken: String? = null,
     ): BasicApiResponseModel<String?>
 
     @GET(IdentityRegistrationPrefix.PREFIX + "/generate-token-without-captcha/public-ep")
-    fun generateJWTTokenWithoutCaptcha(
+    suspend fun generateJWTTokenWithoutCaptcha(
     ): BasicApiResponseModel<String?>
 
     @POST(IdentityRegistrationPrefix.PREFIX + "/resend_confirmation_email")
-    fun resendConfirmationEmail(
+    suspend fun resendConfirmationEmail(
         @Body resendConfirmationRequest: ResendConfirmationRequest,
         @Query("tenantCode") tenantCode: String? = null
     ): BasicApiResponseModel<AppLoginRegistrationModel>
 
     @POST(IdentityRegistrationPrefix.PREFIX + "/resend_confirmation_mobile_number")
-    fun resendConfirmationMobileNumber(
+    suspend fun resendConfirmationMobileNumber(
         @Body resendConfirmationRequest: ResendConfirmationRequest,
         @Query("tenantCode") tenantCode: String? = null
     ): BasicApiResponseModel<AppLoginRegistrationModel>

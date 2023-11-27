@@ -14,12 +14,12 @@ object IdentityPasswordPrefix{
 interface IdentityPasswordService{
 
     @POST( IdentityPasswordPrefix.PREFIX  + "/reset_confirm")
-    fun forgotPasswordConfirm(
+    suspend fun forgotPasswordConfirm(
         @Body ForgotPasswordConfirmRequest: ForgotPasswordConfirmRequest
     ) : BasicApiResponseModel<String?>
 
     @POST( IdentityPasswordPrefix.PREFIX  + "/reset_init")
-    fun forgotPasswordInit(
+    suspend fun forgotPasswordInit(
         @Body ForgotPasswordConfirmRequest: ForgotPasswordConfirmRequest,
         @Query("tenantCode") tenantCode: String? = null
     ) : BasicApiResponseModel<String?>

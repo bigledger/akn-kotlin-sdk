@@ -23,4 +23,12 @@ interface IdentityRegistrationService{
         @Query("inviteKey") inviteKey: String? = null
     ): BasicApiResponseModel<AppLoginRegistrationModel>
 
+    @POST(IdentityRegistrationPrefix.PREFIX + "/with-token/mobile-number/public-ep")
+    fun registerWithMobileNumber(
+        @Body registrationRequest: RegistrationRequest,
+        @Query("tenantCode") tenantCode: String? = null,
+        @Query("websiteCode") websiteCode: String? = null,
+        @Query("inviteKey") inviteKey: String? = null
+    ): BasicApiResponseModel<AppLoginRegistrationModel>
+
 }

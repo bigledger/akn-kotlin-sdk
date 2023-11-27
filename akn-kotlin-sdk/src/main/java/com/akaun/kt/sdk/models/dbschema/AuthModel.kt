@@ -3,9 +3,9 @@ package com.akaun.kt.sdk.models.dbschema
 import java.time.ZonedDateTime
 
 data class LoginRequest(
-    val password: String,
-    val email: String? = null,
-    val mobileNumber: String? = null
+    var password: String,
+    var email: String? = null,
+    var mobileNumber: String? = null
 )
 
 data class GoogleLoginRequest(
@@ -14,28 +14,40 @@ data class GoogleLoginRequest(
 )
 
 data class RegistrationRequest(
-    val password: String? = null,
-    val email: String? = null,
-    val mobileNumber: String? = null,
-    val pinNumber: String? = null,
-    val hostName: String? = null,
-    val messageTemplate: String? = null,
-    val validDateEnd: ZonedDateTime? = null,
-    val description: String = "AKAUN",
-    val domain: String = "akaun.com",
-    val appLoginSubjectExtList: List<bl_applet_login_subject_link_ext> = emptyList(),
-    val nameFirst: String? = null,
-    val nameLast: String? = null,
-    val dob: ZonedDateTime? = null,
-    val appLoginType: LoginSubjectType? = null
+    var password: String? = null,
+    var email: String? = null,
+    var mobileNumber: String? = null,
+    var pinNumber: String? = null,
+    var hostName: String? = null,
+    var messageTemplate: String? = null,
+    var validDateEnd: ZonedDateTime? = null,
+    var description: String = "AKAUN",
+    var domain: String = "akaun.com",
+    var appLoginSubjectExtList: List<bl_applet_login_subject_link_ext> = emptyList(),
+    var nameFirst: String? = null,
+    var nameLast: String? = null,
+    var dob: ZonedDateTime? = null,
+    var appLoginType: LoginSubjectType? = null
 )
 
 data class ResendConfirmationRequest(
-    var email: String = "",
-    var mobileNumber: String = "",
+    var email: String?  = null,
+    var mobileNumber: String?  = null,
     var messageTemplate: String? = null
 )
 
+data class ForgotPasswordConfirmRequest (
+    var email : String? = null,
+    var mobileNumber : String? = null,
+    var confirmationCode  : String? = null,
+    var newPassword  : String? = null,
+)
+
+data class ForgotPasswordInitRequest(
+    var email: String?  = null,
+    var mobileNumber: String?  = null,
+    var messageTemplate: String? = null
+)
 enum class LoginSubjectType {
     PLATFORM, TENANT
 }

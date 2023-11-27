@@ -36,11 +36,11 @@ interface IdentityRegistrationService{
     @GET(IdentityRegistrationPrefix.PREFIX + "/generate-token/public-ep")
     fun generateJWTToken(
         @Query("gRecaptchaResponseToken") gRecaptchaResponseToken: String? = null,
-    ): BasicApiResponseModel<String>
+    ): BasicApiResponseModel<String?>
 
     @GET(IdentityRegistrationPrefix.PREFIX + "/generate-token-without-captcha/public-ep")
     fun generateJWTTokenWithoutCaptcha(
-    ): BasicApiResponseModel<String>
+    ): BasicApiResponseModel<String?>
 
     @POST(IdentityRegistrationPrefix.PREFIX + "/resend_confirmation_email")
     fun resendConfirmationEmail(

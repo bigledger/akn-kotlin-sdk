@@ -30,6 +30,12 @@ data class RegistrationRequest(
     val appLoginType: LoginSubjectType? = null
 )
 
+data class ResendConfirmationRequest(
+    var email: String = "",
+    var mobileNumber: String = "",
+    var messageTemplate: String? = null
+)
+
 enum class LoginSubjectType {
     PLATFORM, TENANT
 }

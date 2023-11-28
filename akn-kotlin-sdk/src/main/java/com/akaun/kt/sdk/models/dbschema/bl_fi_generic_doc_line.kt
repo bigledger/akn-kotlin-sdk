@@ -13,7 +13,7 @@ data class bl_fi_generic_doc_line(
     var acl_config: Any? = null,
     var acl_policy: Any? = null,
     var amount_cogs: Any? = null,
-    var amount_discount: Int? = null,
+    var amount_discount: Double? = null,
     var amount_json: Any? = null,
     var amount_net: Double? = null,
     var amount_open_balance: Any? = null,

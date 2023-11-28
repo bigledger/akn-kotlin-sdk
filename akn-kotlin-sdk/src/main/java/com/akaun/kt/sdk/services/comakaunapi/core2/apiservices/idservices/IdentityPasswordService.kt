@@ -1,6 +1,7 @@
 package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.idservices
 
 import com.akaun.kt.sdk.models.dbschema.ForgotPasswordConfirmRequest
+import com.akaun.kt.sdk.models.dbschema.ForgotPasswordInitRequest
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.BasicApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
 import retrofit2.http.Body
@@ -15,12 +16,12 @@ interface IdentityPasswordService{
 
     @POST( IdentityPasswordPrefix.PREFIX  + "/reset_confirm")
     suspend fun forgotPasswordConfirm(
-        @Body ForgotPasswordConfirmRequest: ForgotPasswordConfirmRequest
+        @Body forgotPasswordConfirmRequest: ForgotPasswordConfirmRequest
     ) : BasicApiResponseModel<String?>
 
     @POST( IdentityPasswordPrefix.PREFIX  + "/reset_init")
     suspend fun forgotPasswordInit(
-        @Body ForgotPasswordConfirmRequest: ForgotPasswordConfirmRequest,
+        @Body forgotPasswordInitRequest: ForgotPasswordInitRequest,
         @Query("tenantCode") tenantCode: String? = null
     ) : BasicApiResponseModel<String?>
 }

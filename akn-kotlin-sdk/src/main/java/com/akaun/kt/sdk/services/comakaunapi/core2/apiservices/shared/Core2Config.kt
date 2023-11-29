@@ -11,6 +11,10 @@ class Core2Config {
         const val DOMAIN_TEST_URL_CORE2 = "https://api-test.akaun.com/core2/dm/"
         const val LOCAL_HOST = "http://localhost:5000/"
 
+        const val DOMAIN_WEB_URL  = "https://akaun.com/"
+        const val CLOUD_WEB_URL = "https://akaun.cloud/"
+        const val DEV_WEB_URL = "https://akaun.dev/"
+
         const val PLATFORM_DOMAIN_URL_PREFIX = "core2/platform/dm/"
 
         const val CUSTOM_CELMONZE_URL_PREFIX = "cm/celmonze/"
@@ -89,5 +93,13 @@ class Core2Config {
         const val HR_PREFIX = "hr/"
         const val HEALTHCARE_PREFIX = "hc/"
         const val MRP_PREFIX = "mrp/"
+    }
+
+    fun getWebUrl(url: String): String {
+        return when (url) {
+            DOMAIN_URL -> DOMAIN_WEB_URL
+            CLOUD_URL -> CLOUD_WEB_URL
+            else -> DEV_WEB_URL
+        }
     }
 }

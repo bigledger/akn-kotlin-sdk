@@ -19,7 +19,7 @@ data class bl_applet_login_subject_link_ext(
     var updated_date: String? = null,
     var value_datetime: Any? = null,
     var value_file: Any? = null,
-    var value_json: Map<String,Any>? = null,
+    var value_json: Any? = null,
     var value_numeric: Any? = null,
     var value_string: Any? = null,
     var vrsn: Any? = null

@@ -2,6 +2,7 @@ package com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.apppletloginsubj
 
 import com.akaun.kt.sdk.models.aggregates.erp.appletloginsubject.AppletLoginSubjectLinkModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.ApiResponseModel
+import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.BasicApiResponseModel
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.PagingResponseModel
 import retrofit2.http.Body
@@ -28,5 +29,5 @@ interface AppletLoginSubjectLinkService {
     @PUT(Core2UrlAppletLoginSubjectLinkPrefix.PREFIX)
     suspend fun updateAppletLoginSubject(
         @Body appletLoginSubjectContainer : AppletLoginSubjectLinkModel
-    )  : ApiResponseModel<AppletLoginSubjectLinkModel>
+    )  : BasicApiResponseModel<AppletLoginSubjectLinkModel>
 }

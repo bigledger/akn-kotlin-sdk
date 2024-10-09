@@ -17,5 +17,6 @@ data class TripsPostQueryCriteria(
     var date_created_from: String? = null,
     var date_created_to: String? = null,
     var search_keyword: String? = null,
-    var orderBy : String? = null
+    var orderBy : String? = null,
+    var order : String? = null
 )

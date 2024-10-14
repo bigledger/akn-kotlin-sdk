@@ -22,6 +22,7 @@ dependencies {
     api (libs.okhttp.core)
     // sandwich library model retrofit responses
     api (libs.sandwich)
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.10")
 }
 
 publishing {

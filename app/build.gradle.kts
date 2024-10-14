@@ -68,4 +68,5 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     implementation(project(":akn-kotlin-sdk"))
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.10")
 }

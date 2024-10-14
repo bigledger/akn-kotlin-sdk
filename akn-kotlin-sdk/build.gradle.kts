@@ -22,6 +22,7 @@ dependencies {
     api (libs.okhttp.core)
     // sandwich library model retrofit responses
     api (libs.sandwich)
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.10")
 }
 
 publishing {
@@ -29,7 +30,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.github.bigledger"
             artifactId = "akn-kotlin-sdk"
-            version = "0.0.75"
+            version = "0.0.74"
             from(components["java"])
         }
     }

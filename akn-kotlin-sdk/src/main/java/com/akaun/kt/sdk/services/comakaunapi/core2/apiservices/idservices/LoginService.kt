@@ -19,14 +19,14 @@ object LoginServicePrefix {
     const val PREFIX = Core2Config.PLATFORM_DOMAIN_URL_PREFIX + "identity/login"
 }
 interface LoginService {
-    @POST(LoginServicePrefix.PREFIX)
-    fun loginWithCall(
+    @POST(LoginServicePrefix.PREFIX + "/no-applet-loading")
+    suspend fun loginWithCall(
         @Body loginRequest: LoginRequest,
         @Query("tenantCode") tenantCode :String? = null
     ): Call<BasicApiResponseModel<LoginResponse>>
 
-    @POST(LoginServicePrefix.PREFIX)
-    fun login(
+    @POST(LoginServicePrefix.PREFIX + "/no-applet-loading")
+    suspend fun login(
         @Body loginRequest: LoginRequest,
         @Query("tenantCode") tenantCode :String? = null
     ): BasicApiResponseModel<LoginResponse>

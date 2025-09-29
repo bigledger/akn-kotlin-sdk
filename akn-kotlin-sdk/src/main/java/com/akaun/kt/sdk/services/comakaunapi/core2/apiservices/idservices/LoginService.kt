@@ -32,13 +32,13 @@ interface LoginService {
     ): BasicApiResponseModel<LoginResponse>
 
     @POST(LoginServicePrefix.PREFIX  + "/google")
-    fun loginToGoogleWithCall(
+    suspend fun loginToGoogleWithCall(
         @Body loginRequest: GoogleLoginRequest,
         @Query("inviteKey") inviteKey :String? = null
     ): Call<BasicApiResponseModel<LoginResponse>>
 
     @POST(LoginServicePrefix.PREFIX  + "/google")
-    fun loginToGoogle(
+    suspend fun loginToGoogle(
         @Body loginRequest: GoogleLoginRequest,
         @Query("inviteKey") inviteKey :String? = null
     ): BasicApiResponseModel<LoginResponse>

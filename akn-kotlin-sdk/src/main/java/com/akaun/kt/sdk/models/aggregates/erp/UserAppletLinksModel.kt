@@ -38,7 +38,7 @@ data class Catalog(
 
 data class Tenant(
     val guid: String,
-    val tenant_ccode: String,
+    val tenant_code: String,
     val tenant_name: String,
     val status: String
 )

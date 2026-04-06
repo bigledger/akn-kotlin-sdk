@@ -7,6 +7,7 @@ import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.BasicApiRe
 import com.akaun.kt.sdk.services.comakaunapi.core2.apiservices.shared.Core2Config
 import retrofit2.http.Body
 import retrofit2.http.GET
+import retrofit2.http.Headers
 import retrofit2.http.POST
 import retrofit2.http.Query
 
@@ -33,11 +34,13 @@ interface IdentityRegistrationService{
         @Query("inviteKey") inviteKey: String? = null
     ): BasicApiResponseModel<AppLoginRegistrationModel>
 
+    @Headers("Content-Type: application/json")
     @GET(IdentityRegistrationPrefix.PREFIX + "/generate-token/public-ep")
     suspend fun generateJWTToken(
         @Query("gRecaptchaResponseToken") gRecaptchaResponseToken: String? = null,
     ): BasicApiResponseModel<String?>
 
+    @Headers("Content-Type: application/json")
     @GET(IdentityRegistrationPrefix.PREFIX + "/generate-token-without-captcha/public-ep")
     suspend fun generateJWTTokenWithoutCaptcha(
     ): BasicApiResponseModel<String?>
